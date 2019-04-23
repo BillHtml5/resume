@@ -144,12 +144,48 @@ a{
 .userCard .pt{
    padding: 50px;
 }
+.userCard dl{
+    margin-top: 10px;
+}
+
 
 .userCard dl dd,
 .userCard dl dt{
     float: left;
-    width: 50%;
-    margin-top: 30px;
+    padding: 5px 0px;
  }
- 
+
+ .userCard dl dt{
+    width: 30%;
+    font-weight: bold;
+}
+ .userCard dl dd{
+    width: 70%;
+    color: #9da0a7;
+ }
+
+ .userCard .media{
+    background: rgb(206, 152, 152);
+    text-align: center;
+
+ }
+ .userCard .media a{
+    display: inline-block;
+    border-radius: 50%;
+    width: 40px;
+    line-height: 30px;
+    padding: 11px 0;
+    margin: 10px
+ }
+ .userCard .media a:hover{
+     background: #9da0a7;
+ }
+
+ .userCard svg{
+    width: 30px;
+    height: 30px;
+    fill: rgb(252, 0, 0);
+    vertical-align: top;
+ }
+
 
