@@ -80,7 +80,7 @@ a{
 .banner{
     height: 515px;
     background-image: url(../img/rscover.jpg);
-    border: 1px solid red;
+    
     background-size: cover;
 }
 
@@ -90,11 +90,11 @@ a{
 }
 
 .userCard{
-    border: 1px solid blue;
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
     background-color: #FFFFFF;
+    
 }
 
 .userCard .welcome{
@@ -174,8 +174,8 @@ a{
     border-radius: 50%;
     width: 40px;
     line-height: 30px;
-    padding: 11px 0;
-    margin: 10px
+    padding: 5px 0;
+    margin: 16px
  }
  .userCard .media a:hover{
      background: #9da0a7;
