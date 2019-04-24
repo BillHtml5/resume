@@ -53,7 +53,6 @@ a{
     width: 100%;
 }
 
-
 .topNavBar nav{
     padding-top: 7px;
 
@@ -110,7 +109,6 @@ a{
     position: relative;
     margin-bottom: 10px;
 }
-
 .userCard .welcome .triangle{
     display: block;
     Border:10px solid transparent;
@@ -187,5 +185,3 @@ a{
     fill: rgb(252, 0, 0);
     vertical-align: top;
  }
-
-
