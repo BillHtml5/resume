@@ -151,15 +151,31 @@
 			</ol>
 		</section>
 
-		<section>
+		<section class="portfolio">
 			<h2>作品集</h2>
 			<nav>
-				<ol>
-					<li>所有</li>
-					<li>框架</li>
-					<li>原生JS&amp;CSS</li>
+				<ol class="clearfix">
+					<li id="skip1">所有</li>
+					<li id="skip2">框架</li>
+					<li id="skip3">原生JS&amp;CSS</li>
 				</ol>
+				<div id="skipbar" class="bar state1">
+					<div class="barinner"></div>
+				</div>
+
 			</nav>
+			<script>
+					skip1.onclick=function(){
+						skipbar.className ='bar state1'
+					}
+					skip2.onclick=function(){
+						skipbar.className ='bar state2'
+					}
+					skip3.onclick=function(){
+						skipbar.className ='bar state3'
+					}
+
+			</script>
 			<div class="jobs">
 				<div class="big"></div>
 				<div class="small"></div>

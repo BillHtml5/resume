@@ -316,7 +316,64 @@ section.skills > ol > li:nth-child(even){
     background: #E8676B;
     width: 90%;
     border-radius: 3px;
+
+}
+section > nav{
+    
+    margin-top: 51px;
+    display: inline-block;
+    vertical-align: top;
+
+}
+section.portfolio{
+    text-align: center;
 }
 
+section > nav > ol{
+    
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: top;
 
 
+}
+section > nav > ol > li {
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;
+}
+section > nav > ol > li:first-child{
+    margin-left: 0px;
+}
+
+section > nav .bar{
+    height: 5px;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 100px;
+    background: white;
+}
+
+section > nav .barinner{
+    height: 100%;
+    background: #E6686A;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.bar.state1 .barinner{
+    margin-left: 0px;
+    width: 50px;
+
+}
+
+.bar.state2 .barinner{
+    margin-left: 65px;
+    width: 50px;
+
+}
+.bar.state3 .barinner{
+    margin-left: 140px;
+    width: 98px;
+
+}
