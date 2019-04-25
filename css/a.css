@@ -233,7 +233,8 @@ h1,h2,h3,h4,h5,h6{
 
 }
 
-section.skills{
+section.skills,
+section.portfolio{
     color: #3d4451;
     max-width: 940px;
     margin-left: auto;
@@ -242,7 +243,8 @@ section.skills{
     
 
 }
-section.skills > h2{
+section.skills > h2,
+section.portfolio > h2{
     color: #3d4451;
     font-size: 34px;
     line-height: 1.2;
@@ -315,3 +317,6 @@ section.skills > ol > li:nth-child(even){
     width: 90%;
     border-radius: 3px;
 }
+
+
+
