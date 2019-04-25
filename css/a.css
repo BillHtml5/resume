@@ -350,7 +350,7 @@ section > nav .bar{
     height: 5px;
     border-radius: 3px;
     margin-top: 5px;
-    margin-bottom: 100px;
+    margin-bottom: 38px;
     background: white;
 }
 
@@ -376,4 +376,11 @@ section > nav .barinner{
     margin-left: 140px;
     width: 98px;
 
+}
+
+.jobs{
+    position: relative;
+}
+.big,.small{
+    position: absolute;
 }
