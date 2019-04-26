@@ -281,43 +281,13 @@ section.skills > ol > li:nth-child(even){
     margin: 4px 0px 40px;
 }
 
-.inside1{
+.inside{
     height: 100%;
     background: #E8676B;
     width: 95%;
     border-radius: 3px;
 }
-.inside2{
-    height: 100%;
-    background: #E8676B;
-    width: 65%;
-    border-radius: 3px;
-}
-.inside3{
-    height: 100%;
-    background: #E8676B;
-    width: 88%;
-    border-radius: 3px;
-}
-.inside4{
-    height: 100%;
-    background: #E8676B;
-    width: 66%;
-    border-radius: 3px;
-}
-.inside5{
-    height: 100%;
-    background: #E8676B;
-    width: 70%;
-    border-radius: 3px;
-}
-.inside6{
-    height: 100%;
-    background: #E8676B;
-    width: 90%;
-    border-radius: 3px;
 
-}
 section > nav{
     
     margin-top: 51px;
