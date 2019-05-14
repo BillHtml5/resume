@@ -6,11 +6,30 @@
 		<link rel="stylesheet" href="./css/loading.css">
 		<script src="./js/iconfont.js"></script>
 		<style>
+			.icon {
+				width: 1em;
+				height: 1em;
+				vertical-align: -0.15em;
+				fill: currentColor;
+				overflow: hidden;
+			}
 
-			.icon {width: 1em;height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
-			.site-welcome {display: none;position: fixed;top: 0px;left: 0px;width: 100%;height: 100%;background: #888;z-index: 1;justify-content: center;align-items: center;}
-			.site-welcome.active {display: flex;}
+			.site-welcome {
+				display: none;
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				background: #888;
+				z-index: 1;
+				justify-content: center;
+				align-items: center;
+			}
 
+			.site-welcome.active {
+				display: flex;
+			}
 		</style>
 	</head>
 	<body>
@@ -28,7 +47,13 @@
 					<ul class="clearfix">
 						<li><a href="#">关于</a></li>
 						<li><a href="#">技能</a></li>
-						<li><a href="#">作品</a></li>
+						<li><a href="#">作品</a>
+							<ul id="submenu" class="submenu">
+								<li>作品1</li>
+								<li>作品2</li>
+								<li>作品3</li>
+							</ul>
+						</li>
 						<li><a href="#">博客</a></li>
 						<li><a href="#">日历</a></li>
 						<li><a href="#">联系方式</a></li>
@@ -191,19 +216,19 @@
 		</section>
 
 		<script>
-			setTimeout(function(){
+			setTimeout(function() {
 				siteWelcome.classList.remove('active')
-			},1000)
-			
-			window.onscroll = function(xxxx){
-				if(window.scrollY>0){
+			}, 1000)
+
+			window.onscroll = function(xxxx) {
+				if (window.scrollY > 0) {
 					topNavBar.classList.add('sticky')
-				}else{
+				} else {
 					topNavBar.classList.remove('sticky')
 				}
-				
 			}
 			
+			// submenu.classList.add('active')
 		</script>
 
 	</body>
