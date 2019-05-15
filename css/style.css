@@ -5,30 +5,18 @@ ol,ul,h2,h3{list-style:none}
 h1,h2,h3,h4,h5,h6{font-weight:normal}
 .clearfix::after{content:'';display:block;clear:both}
 
-.topNavBar{padding:20px 16px 20px 16px;position:fixed;top:0;left:0;width:100%;transition: all 0.75s;color:#CBCACB}
+.topNavBar{padding:20px 16px 20px 16px;position:fixed;top:0;left:0;width:100%;transition: all 0.75s;color:#CBCACB;}
 .topNavBar.sticky{background:#FFFFFF;padding: 10px 0px; box-shadow: 0 0 3px rgba(0, 0, 0,0.25);color: #3D4451;}
 .topNavBar nav{padding-top:4px}
 .topNavBar nav > ul{list-style:none;margin:0;padding:0}
 .topNavBar nav > ul > li{float:left;margin-left:17px;margin-right:17px;position: relative;}
 .topNavBar nav > ul > li > a{font-size:12px;color:inherit;text-decoration:none;font-weight:bold;border-top:3px solid transparent;border-bottom:3px solid transparent;padding-top:5px;padding-bottom:5px;display:block;position: relative;}
 /* .topNavBar nav > ul > li > a:hover{border-bottom:3px solid #e06567} */
-.topNavBar nav > ul > li > a:hover::after{
-	content: '';display: block;position: absolute;top: 100%;left: 0;width: 100%;background: #e06567;height: 3px;animation: menuSlip .3s;border-radius: 1px;}
-@keyframes menuSlip{0%{width: 0;}100%{width: 100%;}}
-
-.topNavBar .submenu{
-	display: none;
-	position: absolute;
-	left: 0;
-	top: 100%;
-}
-.topNavBar .submenu.active{
-	display: block;
-}
-.topNavBar .submenu>li{
-	white-space: nowrap;
-}
-
+.topNavBar nav > ul > li.active> a::after{content: '';display: block;position: absolute;top: 100%;left: 0;width: 100%;background: #e06567;height: 3px;animation: menuSlip .3s;border-radius: 1px;}@keyframes menuSlip{0%{width: 0;}100%{width: 100%;}}
+.topNavBar .submenu{display: none;position: absolute;right: 0;top: 100%;background: white;color: #3D4451;font-size: 12px;box-shadow: 0 0 5px rgba(0,0,0,0.5);}
+.topNavBar li.active> .submenu{display: block;animation: subMenuSlide .3s;}
+@keyframes subMenuSlide{from{margin-right: 100%;}to{margin-right: 0;}}
+.topNavBar .submenu>li{white-space: nowrap;padding: 5px 10px;}
 
 .topNavBar .logo{font-size:24px;font-family:'Arial Black';padding-top:3px;padding-bottom:3px}
 .topNavBar .logo .rs{margin-right:4px;color:#e6686a}

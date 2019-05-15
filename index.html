@@ -45,19 +45,26 @@
 				<nav style="float: right;">
 
 					<ul class="clearfix">
-						<li><a href="#">关于</a></li>
-						<li><a href="#">技能</a></li>
-						<li><a href="#">作品</a>
+						<li class="menuTigger"><a href="#">关于</a></li>
+						<li class="menuTigger"><a href="#">技能</a></li>
+						<li class="menuTigger"><a href="#">作品</a>
 							<ul id="submenu" class="submenu">
 								<li>作品1</li>
 								<li>作品2</li>
 								<li>作品3</li>
 							</ul>
 						</li>
-						<li><a href="#">博客</a></li>
-						<li><a href="#">日历</a></li>
-						<li><a href="#">联系方式</a></li>
-						<li><a href="#">其他</a></li>
+						<li class="menuTigger"><a  href="#">博客</a>
+							<ul id="submenu" class="submenu">
+								<li>博客1</li>
+								<li>博客2</li>
+								<li>博客3</li>
+							</ul>
+						</li>
+
+						<li class="menuTigger"><a href="#">日历</a></li>
+						<li class="menuTigger"><a href="#">联系方式</a></li>
+						<li class="menuTigger"><a href="#">其他</a></li>
 
 					</ul>
 				</nav>
@@ -217,18 +224,28 @@
 
 		<script>
 			setTimeout(function() {
-				siteWelcome.classList.remove('active')
+				siteWelcome.classList.remove('active');
 			}, 1000)
 
 			window.onscroll = function(xxxx) {
 				if (window.scrollY > 0) {
-					topNavBar.classList.add('sticky')
+					topNavBar.classList.add('sticky');
 				} else {
-					topNavBar.classList.remove('sticky')
+					topNavBar.classList.remove('sticky');
 				}
 			}
-			
-			// submenu.classList.add('active')
+
+			let liTigs = document.getElementsByClassName('menuTigger')
+			for (let i = 0; i < liTigs.length; i++) {
+
+				liTigs[i].onmouseenter = function(x) {
+					x.currentTarget.classList.add('active')
+				}
+
+				liTigs[i].onmouseleave = function(x) {
+					x.currentTarget.classList.remove('active')
+				}
+			}
 		</script>
 
 	</body>
