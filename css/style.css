@@ -45,8 +45,8 @@ h1,h2,h3,h4,h5,h6{font-weight:normal}
 
 .main{margin-top:-355px}
 .main .download{font-size:14px;line-height:16px;padding:21px 55px;display:inline-block;border:1px solid #CDCFD1;background:#EFEFEF;border-radius:2px;color:#000;transition:box-shadow 0.3s}
-.download-father{margin-top:33px;text-align:center}
 .main .download:hover{box-shadow:0px 3px 10px 0px rgba(0,0,0,0.5)}
+.download-father{margin-top:33px;text-align:center}
 .introduction{max-width:940px;margin-left:auto;margin-right:auto;margin-top:52px;font-family:inherit;font-style:inherit;font-weight:inherit;color:#464D59;text-align:center;font-size:100%;vertical-align:baseline}
 
 section.skills,section.portfolio{color:#3d4451;max-width:940px;margin-left:auto;margin-right:auto;margin-top:103px}
