@@ -6,9 +6,30 @@
 		<link rel="stylesheet" href="./css/loading.css">
 		<script src="./js/iconfont.js"></script>
 		<style>
-			.icon {width: 1em;height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
-			.site-welcome {display: none;position: fixed;top: 0px;left: 0px;width: 100%;height: 100%;background: #888;z-index: 1;justify-content: center;align-items: center;}
-			.site-welcome.active {display: flex;}
+			.icon {
+				width: 1em;
+				height: 1em;
+				vertical-align: -0.15em;
+				fill: currentColor;
+				overflow: hidden;
+			}
+
+			.site-welcome {
+				display: none;
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				background: #888;
+				z-index: 1;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.site-welcome.active {
+				display: flex;
+			}
 		</style>
 	</head>
 	<body>
@@ -33,7 +54,7 @@
 								<li>作品3</li>
 							</ul>
 						</li>
-						<li class="menuTigger"><a  href="#blog">博客</a>
+						<li class="menuTigger"><a href="#blog">博客</a>
 							<ul id="submenu" class="submenu">
 								<li>博客1</li>
 								<li>博客2</li>
@@ -53,7 +74,7 @@
 		<div class="banner">
 			<div class="mask"></div>
 		</div>
-		<main  class="main">
+		<main class="main">
 			<div id="about" class="userCard">
 				<div class="pt clearfix">
 					<div class="picture">
@@ -200,7 +221,7 @@
 
 			</div>
 		</section>
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
 		<script>
 			setTimeout(function() {
 				siteWelcome.classList.remove('active');
@@ -225,37 +246,33 @@
 					x.currentTarget.classList.remove('active')
 				}
 			}
-			
+
 			let aTags = document.querySelectorAll('nav.menu > ul > li > a')
-			for(let i=0; i<aTags.length; i++){
-				aTags[i].onclick =function(x){
-				x.preventDefault();
-				let a = x.currentTarget;
-				let href = a.getAttribute('href');
-				let element = document.querySelector(href);
-				let top = element.offsetTop;
-				//let top=document.querySelector(x.currentTarget.getAttribute('href')).offsetTop;
-				
-				let n=25;	//一共多少次
-				let duration=500 / n;  //多长时间动一次
-				let currentTop = window.scrollY;
-				let targetTop = top - 80;
-				let distance = (targetTop - currentTop) / n;
-				let i=0;
-				let id = setInterval(()=>{
-					
-					if(i===n){window.clearInterval(id)
-						return
-					}
-					i=i+1
-					window.scrollTo(0,currentTop + distance*i)
-					
-				},duration)
-				
-				
+			for (let i = 0; i < aTags.length; i++) {
+				aTags[i].onclick = function(x) {
+					x.preventDefault();
+					let a = x.currentTarget;
+					let href = a.getAttribute('href');
+					let element = document.querySelector(href);
+					let top = element.offsetTop;
+					//let top=document.querySelector(x.currentTarget.getAttribute('href')).offsetTop;
+
+					let n = 25; //一共多少次
+					let t = 500 / n; //多长时间动一次
+					let currentTop = window.scrollY;
+					let targetTop = top - 80;
+					let distance = (targetTop - currentTop) / n;
+					let i = 0;
+					let id = setInterval(() => {
+						if (i === n) {window.clearInterval(id);return}
+						i = i + 1;
+						window.scrollTo(0, currentTop + distance * i);
+					}, t)
+
 				}
 			}
 		</script>
 
 	</body>
+
 </html>
