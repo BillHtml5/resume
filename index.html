@@ -250,13 +250,13 @@
 			let aTags = document.querySelectorAll('nav.menu > ul > li > a')
 			for (let i = 0; i < aTags.length; i++) {
 				aTags[i].onclick = function(x) {
-					x.preventDefault();
-					let a = x.currentTarget;
+ 					x.preventDefault();
+/*					let a = x.currentTarget;
 					let href = a.getAttribute('href');
 					let element = document.querySelector(href);
-					let top = element.offsetTop;
-					//下面这句可以替代上面四句
-					//let top=document.querySelector(x.currentTarget.getAttribute('href')).offsetTop;
+					let top = element.offsetTop; */
+					//优化上面四句
+					let top=document.querySelector(x.currentTarget.getAttribute('href')).offsetTop;
 
 					let n = 25; //一共多少次
 					let t = 500 / n; //多长时间动一次
@@ -273,7 +273,6 @@
 				}
 			}
 		</script>
-
 	</body>
 
 </html>
