@@ -75,7 +75,7 @@
 			<div class="mask"></div>
 		</div>
 		<main class="main">
-			<div id="about" class="userCard">
+			<div data-x id="about" class="userCard">
 				<div class="pt clearfix">
 					<div class="picture">
 						<img src="./img/touxiang.jpg" width="299" height="347" alt="头像">
@@ -141,7 +141,7 @@
 			</p>
 		</main>
 
-		<section id="skills" class="skills">
+		<section data-x id="skills" class="skills">
 			<h2>技能</h2>
 			<ol class="clearfix">
 				<li>
@@ -183,7 +183,7 @@
 			</ol>
 		</section>
 
-		<section id="opus" class="portfolio">
+		<section data-x id="opus" class="portfolio">
 			<h2>作品集</h2>
 			<nav>
 				<ol class="clearfix">
@@ -227,14 +227,32 @@
 				siteWelcome.classList.remove('active');
 			}, 888)
 
-			window.onscroll = function(x) {
+			window.onscroll = function(xxxxx) {
 				if (window.scrollY > 0) {
 					topNavBar.classList.add('sticky');
 				} else {
 					topNavBar.classList.remove('sticky');
 				}
+				console.log('window.scrollY')
 				console.log(window.scrollY)
+				//获得含有data-x属性的标签   -----有bug待 解决
+				let specialTags = document.querySelectorAll('[data-x]')
+				let minIndex= 0
+				for(let i = 1; i< specialTags.length; i++){
+					if(Math.abs(specialTags[i].offsetTop-window.scrollY)< Math.abs(specialTags[minIndex].offsetTop)-window.scrollY){
+						minIndex= i
+					}
+				}
+				
+				specialTags[minIndex].classList.add('active')
+				let id = specialTags[minIndex].id
+				let a =document.querySelector('a[href="#' + id + '"]')
+				let li =a.parentNode
+				li.classList.add('active')
 			}
+
+
+
 
 			let liTigs = document.getElementsByClassName('menuTigger')
 			for (let i = 0; i < liTigs.length; i++) {

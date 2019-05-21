@@ -5,6 +5,7 @@ ol,ul,h2,h3{list-style:none}
 h1,h2,h3,h4,h5,h6{font-weight:normal}
 .clearfix::after{content:'';display:block;clear:both}
 
+
 .topNavBar{padding:20px 16px 20px 16px;position:fixed;top:0;left:0;width:100%;transition: all 0.75s;color:#CBCACB;}
 .topNavBar.sticky{background:#FFFFFF;padding: 10px 0px; box-shadow: 0 0 3px rgba(0, 0, 0,0.25);color: #3D4451;}
 .topNavBar nav{padding-top:4px}
