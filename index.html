@@ -227,12 +227,13 @@
 				siteWelcome.classList.remove('active');
 			}, 888)
 
-			window.onscroll = function(xxxx) {
+			window.onscroll = function(x) {
 				if (window.scrollY > 0) {
 					topNavBar.classList.add('sticky');
 				} else {
 					topNavBar.classList.remove('sticky');
 				}
+				console.log(window.scrollY)
 			}
 
 			let liTigs = document.getElementsByClassName('menuTigger')
